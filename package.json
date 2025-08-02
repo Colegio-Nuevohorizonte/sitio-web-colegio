@@ -1,0 +1,24 @@
+{
+  "name": "colegio-nuevo-horizonte",
+  "version": "1.0.0",
+  "description": "Sitio web del Colegio Nuevo Horizonte con TinaCMS",
+  "main": "index.html",
+  "scripts": {
+    "dev": "tinacms dev -c \"python -m http.server 8000\"",
+    "build": "tinacms build",
+    "serve": "python -m http.server 8000",
+    "build-noticias": "node scripts/procesar-noticias.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.5.30",
+    "tinacms": "^1.5.30",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": ["educación", "colegio", "sitio-web", "tinacms"],
+  "author": "Colegio Nuevo Horizonte",
+  "license": "MIT"
+}
