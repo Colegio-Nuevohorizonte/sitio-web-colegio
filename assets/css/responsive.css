@@ -349,7 +349,8 @@
     }
 }
 
-/* === MODO DARK (Para futuras implementaciones) === */
+/* === MODO DARK (Deshabilitado temporalmente) === */
+/*
 @media (prefers-color-scheme: dark) {
     :root {
         --blanco: #1a202c;
@@ -373,6 +374,7 @@
         background: #0f1419;
     }
 }
+*/
 
 /* === REDUCCIÓN DE MOVIMIENTO === */
 @media (prefers-reduced-motion: reduce) {
