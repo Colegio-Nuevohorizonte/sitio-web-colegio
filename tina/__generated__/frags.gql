@@ -1,0 +1,17 @@
+fragment NoticiasParts on Noticias {
+  __typename
+  titulo
+  fecha
+  categoria
+  imagen
+  resumen
+  destacada
+  autor
+  estado
+  contenido
+  galeria {
+    __typename
+    imagen
+    alt
+  }
+}
