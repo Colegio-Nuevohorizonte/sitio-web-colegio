@@ -1,0 +1,396 @@
+/* Variables de colores vibrantes */
+:root {
+    --rojo-vibrante: #FF4444;
+    --naranja-vibrante: #FF7722;
+    --amarillo-vibrante: #FFD700;
+    --verde-vibrante: #32CD32;
+    --azul-vibrante: #1E90FF;
+    --morado-vibrante: #8A2BE2;
+    --rosa-vibrante: #FF69B4;
+    --gradiente-rojo: linear-gradient(135deg, #FF4444, #FF7722);
+    --gradiente-amarillo: linear-gradient(135deg, #FFD700, #FFA500);
+    --gradiente-naranja: linear-gradient(135deg, #FF7722, #FF4444);
+    --gradiente-multicolor: linear-gradient(135deg, #FF4444, #FF7722, #FFD700, #32CD32);
+    --gradiente-rainbow: linear-gradient(135deg, #FF4444 0%, #FF7722 20%, #FFD700 40%, #32CD32 60%, #1E90FF 80%, #8A2BE2 100%);
+    --blanco: #FFFFFF;
+    --gris-claro: #FFF8F0;
+    --negro: #333333;
+}
+
+/* Animaciones */
+@keyframes colorShift {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Header y Navegación */
+.header {
+    background: var(--gradiente-multicolor) !important;
+    box-shadow: 0 4px 20px rgba(255,68,68,0.3) !important;
+}
+
+.nav__logo-text {
+    color: var(--blanco) !important;
+    font-weight: bold !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3) !important;
+}
+
+.nav__link {
+    color: var(--blanco) !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav__link:hover,
+.nav__link--active {
+    color: var(--amarillo-vibrante) !important;
+    text-shadow: 0 0 8px rgba(255,215,0,0.5) !important;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: linear-gradient(135deg, #FFE4E1, #FFF8DC) !important;
+    border-bottom: 3px solid var(--naranja-vibrante) !important;
+}
+
+.breadcrumb__link {
+    color: var(--rojo-vibrante) !important;
+    font-weight: 500 !important;
+}
+
+.breadcrumb__current {
+    color: var(--naranja-vibrante) !important;
+    font-weight: bold !important;
+}
+
+/* Page Headers */
+.page-header,
+.hero {
+    background: var(--gradiente-rainbow) !important;
+    color: var(--blanco) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.page-header::before,
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,68,68,0.1) 0%, rgba(255,119,34,0.1) 25%, rgba(255,215,0,0.1) 50%, rgba(50,205,50,0.1) 75%, rgba(30,144,255,0.1) 100%);
+    animation: colorShift 8s ease-in-out infinite;
+}
+
+.page-header__title,
+.hero__title,
+.section__title {
+    color: var(--rojo-vibrante) !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+    position: relative !important;
+    z-index: 1 !important;
+    font-weight: bold !important;
+}
+
+.page-header__subtitle,
+.hero__subtitle {
+    position: relative !important;
+    z-index: 1 !important;
+    opacity: 0.95 !important;
+}
+
+/* Botones */
+.btn,
+.button {
+    background: var(--gradiente-naranja) !important;
+    color: var(--blanco) !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    border-radius: 25px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(255,119,34,0.3) !important;
+}
+
+.btn:hover,
+.button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(255,68,68,0.4) !important;
+    background: var(--gradiente-rojo) !important;
+}
+
+/* Cards y Contenedores */
+.card,
+.mision-vision__item,
+.valor,
+.servicio,
+.programa,
+.instalacion,
+.equipo__member,
+.reconocimiento {
+    background: var(--blanco) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 8px 32px rgba(255,68,68,0.15) !important;
+    transition: all 0.3s ease !important;
+    border: 3px solid transparent !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.card::before,
+.mision-vision__item::before,
+.valor::before,
+.servicio::before,
+.programa::before,
+.instalacion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--gradiente-multicolor);
+    z-index: 1;
+}
+
+.card:hover,
+.valor:hover,
+.servicio:hover,
+.programa:hover,
+.instalacion:hover,
+.equipo__member:hover,
+.reconocimiento:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(255,68,68,0.2) !important;
+    border-color: var(--naranja-vibrante) !important;
+}
+
+/* Iconos */
+.mision-vision__icon,
+.valor__icon,
+.servicio__icon,
+.programa__icon,
+.instalacion__icon,
+.reconocimiento__icon,
+.feature__icon {
+    border-radius: 50% !important;
+    color: var(--blanco) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+}
+
+/* Distribución de colores para iconos */
+.mision-vision__item:nth-child(1) .mision-vision__icon,
+.valor:nth-child(1) .valor__icon,
+.servicio:nth-child(1) .servicio__icon,
+.programa:nth-child(1) .programa__icon,
+.instalacion:nth-child(1) .instalacion__icon,
+.reconocimiento:nth-child(1) .reconocimiento__icon {
+    background: var(--gradiente-rojo) !important;
+}
+
+.mision-vision__item:nth-child(2) .mision-vision__icon,
+.valor:nth-child(2) .valor__icon,
+.servicio:nth-child(2) .servicio__icon,
+.programa:nth-child(2) .programa__icon,
+.instalacion:nth-child(2) .instalacion__icon,
+.reconocimiento:nth-child(2) .reconocimiento__icon {
+    background: var(--gradiente-amarillo) !important;
+}
+
+.valor:nth-child(3) .valor__icon,
+.servicio:nth-child(3) .servicio__icon,
+.programa:nth-child(3) .programa__icon,
+.instalacion:nth-child(3) .instalacion__icon,
+.reconocimiento:nth-child(3) .reconocimiento__icon {
+    background: var(--gradiente-naranja) !important;
+}
+
+.valor:nth-child(4) .valor__icon,
+.servicio:nth-child(4) .servicio__icon,
+.programa:nth-child(4) .programa__icon,
+.instalacion:nth-child(4) .instalacion__icon,
+.reconocimiento:nth-child(4) .reconocimiento__icon {
+    background: linear-gradient(135deg, var(--verde-vibrante), var(--azul-vibrante)) !important;
+}
+
+.valor:nth-child(5) .valor__icon,
+.servicio:nth-child(5) .servicio__icon,
+.programa:nth-child(5) .programa__icon,
+.instalacion:nth-child(5) .instalacion__icon,
+.reconocimiento:nth-child(5) .reconocimiento__icon {
+    background: linear-gradient(135deg, var(--morado-vibrante), var(--rosa-vibrante)) !important;
+}
+
+.valor:nth-child(6) .valor__icon,
+.servicio:nth-child(6) .servicio__icon,
+.programa:nth-child(6) .programa__icon,
+.instalacion:nth-child(6) .instalacion__icon,
+.reconocimiento:nth-child(6) .reconocimiento__icon {
+    background: linear-gradient(135deg, var(--azul-vibrante), var(--morado-vibrante)) !important;
+}
+
+/* Títulos y textos */
+.mision-vision__title,
+.valor__title,
+.servicio__title,
+.programa__title,
+.instalacion__title,
+.equipo__name,
+.reconocimiento__title {
+    color: var(--rojo-vibrante) !important;
+    font-weight: bold !important;
+}
+
+.equipo__position {
+    color: var(--naranja-vibrante) !important;
+    font-weight: 600 !important;
+}
+
+/* Backgrounds de secciones */
+.mision-vision,
+.valores,
+.servicios,
+.programas,
+.instalaciones,
+.equipo,
+.reconocimientos {
+    background: linear-gradient(135deg, #FFF8F0, #FFE4E1) !important;
+}
+
+.mision-vision:nth-child(even),
+.valores:nth-child(even),
+.servicios:nth-child(even),
+.programas:nth-child(even),
+.instalaciones:nth-child(even),
+.equipo:nth-child(even),
+.reconocimientos:nth-child(even) {
+    background: linear-gradient(135deg, #FFE4E1, #FFF8DC) !important;
+}
+
+/* Badges y etiquetas */
+.reconocimiento__year,
+.badge,
+.tag {
+    background: var(--gradiente-naranja) !important;
+    color: var(--blanco) !important;
+    border-radius: 20px !important;
+    padding: 0.25rem 0.75rem !important;
+    font-weight: bold !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+}
+
+/* Footer */
+.footer {
+    background: var(--gradiente-multicolor) !important;
+    color: var(--blanco) !important;
+}
+
+.footer__title {
+    color: var(--amarillo-vibrante) !important;
+    font-weight: bold !important;
+}
+
+.footer__link {
+    color: var(--blanco) !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer__link:hover {
+    color: var(--amarillo-vibrante) !important;
+}
+
+.footer__social-link {
+    background: var(--gradiente-rojo) !important;
+    color: var(--blanco) !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+}
+
+.footer__social-link:hover {
+    background: var(--gradiente-amarillo) !important;
+    transform: scale(1.1) !important;
+}
+
+/* Formularios */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    border: 2px solid var(--naranja-vibrante) !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--rojo-vibrante) !important;
+    box-shadow: 0 0 15px rgba(255,68,68,0.3) !important;
+}
+
+/* Efectos especiales */
+.highlight {
+    background: var(--gradiente-amarillo) !important;
+    color: var(--negro) !important;
+    padding: 2px 8px !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .card,
+    .valor,
+    .servicio,
+    .programa,
+    .instalacion {
+        margin-bottom: 20px !important;
+    }
+    
+    .page-header__title,
+    .hero__title {
+        font-size: 2rem !important;
+    }
+}
+
+/* Mejoras para accesibilidad */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Estados de focus para navegación por teclado */
+.nav__link:focus,
+.btn:focus,
+.button:focus,
+.footer__link:focus {
+    outline: 3px solid var(--amarillo-vibrante) !important;
+    outline-offset: 2px !important;
+}

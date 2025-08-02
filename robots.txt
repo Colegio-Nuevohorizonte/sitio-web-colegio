@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.colegionuevohorizonte.edu.py/sitemap.xml
+
+# Bloquear archivos no importantes para SEO
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /assets/fonts/
+
+# Permitir imágenes para indexación
+Allow: /assets/img/
