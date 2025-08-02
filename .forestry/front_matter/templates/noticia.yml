@@ -1,0 +1,99 @@
+---
+label: Noticia
+hide_body: false
+fields:
+- name: titulo
+  type: text
+  config:
+    required: true
+  label: Título de la Noticia
+  description: El título principal de la noticia
+- name: fecha
+  type: datetime
+  label: Fecha de Publicación
+  description: Cuándo se publicó esta noticia
+  config:
+    required: true
+    date_format: DD/MM/YYYY
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DD
+- name: categoria
+  type: select
+  default: eventos
+  config:
+    required: true
+    options:
+    - academico
+    - deportes
+    - eventos
+    - reconocimientos
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Categoría
+  description: Tipo de noticia
+- name: imagen
+  type: file
+  config:
+    maxSize: 10
+  label: Imagen Principal
+  description: Imagen que aparecerá en la noticia (recomendado 800x400px)
+- name: resumen
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+    max: 200
+  label: Resumen
+  description: Breve descripción de la noticia (máximo 200 caracteres)
+- name: destacada
+  type: boolean
+  label: ¿Es noticia destacada?
+  description: Las noticias destacadas aparecen en la sección principal
+  default: false
+- name: contenido
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Contenido de la Noticia
+  description: El texto completo de la noticia
+- name: galeria
+  type: image_gallery
+  config: {}
+  label: Galería de Imágenes (Opcional)
+  description: Imágenes adicionales para la noticia
+- name: autor
+  type: text
+  config:
+    required: false
+  label: Autor
+  description: Quien escribió la noticia
+  default: Colegio Nuevo Horizonte
+- name: estado
+  type: select
+  default: publicado
+  config:
+    required: true
+    options:
+    - borrador
+    - publicado
+    - archivado
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Estado
+  description: Estado de publicación
+pages:
+- _noticias/ejemplo-noticia.md

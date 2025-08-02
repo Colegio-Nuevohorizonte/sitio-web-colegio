@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinaCMS - Colegio Nuevo Horizonte</title>
+  <script type="module">
+    import { TinaCMS } from '@tinacms/toolkit'
+    
+    const cms = new TinaCMS({
+      clientId: 'ee46aae1-9487-4d53-9950-2cf9d71a40ba',
+      token: '4dcf8f2a172d5defd8959423c48e98cd6f86aaed',
+      branch: 'main',
+      media: {
+        tina: {
+          mediaRoot: 'assets/img/noticias',
+          publicFolder: '.',
+        },
+      },
+    })
+    
+    cms.enable()
+  </script>
+</head>
+<body>
+  <div id="root">
+    <p>Cargando TinaCMS...</p>
+    <p>Si no carga automáticamente, <a href="https://app.tina.io/projects/ee46aae1-9487-4d53-9950-2cf9d71a40ba">haz clic aquí</a></p>
+  </div>
+</body>
+</html>

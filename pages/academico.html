@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas Académicos - Colegio Nuevo Horizonte</title>
+    <meta name="description" content="Descubre nuestros programas académicos desde infantil hasta bachillerato. Educación bilingüe, STEAM y preparación universitaria.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/colores-vibrantes.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <img src="../assets/img/Lgo-Nuevo-Horizonte.webp" alt="Colegio Nuevo Horizonte" class="nav__logo-img" loading="lazy">
+                    <span class="nav__logo-text">Colegio Nuevo Horizonte</span>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="../index.html" class="nav__link">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="institucional.html" class="nav__link">Institucional</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="academico.html" class="nav__link nav__link--active">Académico</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="infraestructura.html" class="nav__link">Infraestructura</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="noticias.html" class="nav__link">Noticias</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contacto.html" class="nav__link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">Inicio</a>
+                </li>
+                <li class="breadcrumb__item">
+                    <span class="breadcrumb__separator">/</span>
+                    <span class="breadcrumb__current">Académico</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Programas Académicos</h1>
+                <p class="page-header__subtitle">Formación integral desde nivel inicial hasta educación media con metodologías innovadoras</p>
+            </div>
+        </section>
+
+        <!-- Niveles Educativos -->
+        <section class="niveles section">
+            <div class="container">
+                <h2 class="section__title">Niveles Educativos</h2>
+                <div class="niveles__grid">
+                    <div class="nivel" data-aos="fade-up">
+                        <div class="nivel__icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3 class="nivel__title">Educación de Nivel Inicial</h3>
+                        <p class="nivel__age">3 - 6 años</p>
+                        <ul class="nivel__features">
+                            <li>Metodología Montessori</li>
+                            <li>Desarrollo de habilidades motoras</li>
+                            <li>Iniciación al guaraní</li>
+                            <li>Juego dirigido y libre</li>
+                            <li>Psicomotricidad</li>
+                        </ul>
+                        <a href="#infantil" class="btn btn--secondary">Ver más</a>
+                    </div>
+                    
+                    <div class="nivel" data-aos="fade-up" data-aos-delay="100">
+                        <div class="nivel__icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3 class="nivel__title">Educación Escolar Básica</h3>
+                        <p class="nivel__age">6 - 12 años</p>
+                        <ul class="nivel__features">
+                            <li>Educación bilingüe</li>
+                            <li>Proyecto SCRATCH</li>
+                            <li>Lectoescritura avanzada</li>
+                            <li>Matemáticas manipulativas</li>
+                            <li>Educación emocional</li>
+                        </ul>
+                        <a href="#primaria" class="btn btn--secondary">Ver más</a>
+                    </div>
+                    
+                    <div class="nivel" data-aos="fade-up" data-aos-delay="200">
+                        <div class="nivel__icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="nivel__title">Educación de Tercer Ciclo</h3>
+                        <p class="nivel__age">12 - 16 años</p>
+                        <ul class="nivel__features">
+                            <li>Preparación ESO</li>
+                            <li>Laboratorios especializados</li>
+                            <li>Proyectos de investigación</li>
+                            <li>Orientación vocacional</li>
+                            <li>Intercambios internacionales</li>
+                        </ul>
+                        <a href="#secundaria" class="btn btn--secondary">Ver más</a>
+                    </div>
+                    
+                    <div class="nivel" data-aos="fade-up" data-aos-delay="300">
+                        <div class="nivel__icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="nivel__title">Educación de Nivel Medio</h3>
+                        <p class="nivel__age">16 - 18 años</p>
+                        <ul class="nivel__features">
+                            <li>Modalidades Científica y Social</li>
+                            <li>Preparación PAU/EBAU</li>
+                            <li>Programas universitarios</li>
+                            <li>Liderazgo y emprendimiento</li>
+                            <li>Certificaciones internacionales</li>
+                        </ul>
+                        <a href="#bachillerato" class="btn btn--secondary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodología -->
+        <section class="metodologia section">
+            <div class="container">
+                <h2 class="section__title">Nuestra Metodología</h2>
+                <div class="metodologia__content">
+                    <div class="metodologia__text">
+                        <div class="metodologia__item" data-aos="fade-right">
+                            <div class="metodologia__item-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="metodologia__item-content">
+                                <h3>Aprendizaje Significativo</h3>
+                                <p>Conectamos los nuevos conocimientos con las experiencias previas del estudiante, creando un aprendizaje duradero y aplicable.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="metodologia__item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="metodologia__item-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metodologia__item-content">
+                                <h3>Aprendizaje Colaborativo</h3>
+                                <p>Fomentamos el trabajo en equipo y la colaboración como herramientas fundamentales para el desarrollo social y académico.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="metodologia__item" data-aos="fade-right" data-aos-delay="200">
+                            <div class="metodologia__item-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="metodologia__item-content">
+                                <h3>Pensamiento Crítico</h3>
+                                <p>Desarrollamos la capacidad de análisis, evaluación y síntesis para formar pensadores independientes y creativos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="metodologia__image" data-aos="fade-left">
+                        <picture>
+                            <source data-srcset="../assets/img/metodologia.webp" type="image/webp">
+                            <img data-src="../assets/img/metodologia.jpg" alt="Metodología educativa" class="lazy-image">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programas Especiales -->
+        <section class="programas section">
+            <div class="container">
+                <h2 class="section__title">Programas Especiales</h2>
+                <div class="programas__grid">
+                    <div class="programa" data-aos="zoom-in">
+                        <div class="programa__header">
+                            <div class="programa__icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="programa__title">Programa Bilingüe</h3>
+                        </div>
+                        <div class="programa__content">
+                            <p class="programa__description">
+                                Educación en guaraní desde nivel inicial con profesores nativos y certificaciones oficiales.
+                            </p>
+                            <ul class="programa__features">
+                                <li>50% de clases en guaraní</li>
+                                <li>Profesores nativos certificados</li>
+                                <li>Preparación exámenes oficiales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="programa" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="programa__header">
+                            <div class="programa__icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 class="programa__title">SCRATCH</h3>
+                        </div>
+                        <div class="programa__content">
+                            <p class="programa__description">
+                                Programación visual y pensamiento computacional desde temprana edad con la plataforma SCRATCH.
+                            </p>
+                            <ul class="programa__features">
+                                <li>Programación visual con bloques</li>
+                                <li>Desarrollo de juegos y animaciones</li>
+                                <li>Pensamiento lógico y computacional</li>
+                                <li>Proyectos creativos interactivos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="programa" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="programa__header">
+                            <div class="programa__icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="programa__title">Educación Emocional</h3>
+                        </div>
+                        <div class="programa__content">
+                            <p class="programa__description">
+                                Desarrollo de inteligencia emocional y habilidades socioemocionales.
+                            </p>
+                            <ul class="programa__features">
+                                <li>Gestión de emociones</li>
+                                <li>Resolución de conflictos</li>
+                                <li>Mindfulness y relajación</li>
+                                <li>Habilidades sociales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="programa" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="programa__header">
+                            <div class="programa__icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <h3 class="programa__title">Deporte y Salud</h3>
+                        </div>
+                        <div class="programa__content">
+                            <p class="programa__description">
+                                Promoción de hábitos saludables y excelencia deportiva.
+                            </p>
+                            <ul class="programa__features">
+                                <li>Educación física diaria</li>
+                                <li>Equipos deportivos</li>
+                                <li>Nutrición y salud</li>
+                                <li>Competiciones escolares</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horarios y Calendario -->
+        <section class="horarios section">
+            <div class="container">
+                <div class="horarios__content">
+                    <div class="horarios__info">
+                        <h2 class="section__title">Horarios y Calendario</h2>
+                        <div class="horario__grid">
+                            <div class="horario__item">
+                                <h3 class="horario__title">
+                                    <i class="fas fa-clock"></i>
+                                    Horario Escolar
+                                </h3>
+                                <div class="horario__details">
+                                    <p><strong>Nivel Inicial y Escolar Básica:</strong> 7:00 - 11:45</p>
+                                    <p><strong>Tercer Ciclo y Nivel Medio:</strong> 7:00 - 11:45</p>
+                                    <p><strong>Actividades Extraescolares:</strong> 15:30 - 17:30</p>
+                                </div>
+                            </div>
+                            
+                            <div class="horario__item">
+                                <h3 class="horario__title">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Calendario Escolar
+                                </h3>
+                                <div class="horario__details">
+                                    <p><strong>Inicio de curso:</strong> Febrero</p>
+                                    <p><strong>Vacaciones Semana Santa:</strong> Variable</p>
+                                    <p><strong>Fin de curso:</strong> Noviembre</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="horarios__cta">
+                        <div class="cta-card">
+                            <h3>¿Interesado en nuestros programas?</h3>
+                            <p>Solicita más información sobre admisiones y proceso de matrícula</p>
+                            <a href="contacto.html" class="btn btn--primary">Solicitar Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <img src="../assets/img/Lgo-Nuevo-Horizonte.webp" alt="Colegio Nuevo Horizonte" class="footer__logo-img" loading="lazy">
+                        <span class="footer__logo-text">Colegio Nuevo Horizonte</span>
+                    </div>
+                    <p class="footer__description">
+                        Formando líderes del mañana con valores sólidos y educación de excelencia.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Enlaces Rápidos</h3>
+                    <ul class="footer__links">
+                        <li><a href="institucional.html" class="footer__link">Sobre Nosotros</a></li>
+                        <li><a href="academico.html" class="footer__link">Programas Académicos</a></li>
+                        <li><a href="infraestructura.html" class="footer__link">Instalaciones</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Información</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Admisiones</a></li>
+                        <li><a href="#" class="footer__link">Calendario Escolar</a></li>
+                        <li><a href="#" class="footer__link">Noticias</a></li>
+                        <li><a href="#" class="footer__link">Eventos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contacto</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Principal 123, Ciudad</span>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+34 123 456 789</span>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@colegionuevohorizonte.edu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 Colegio Nuevo Horizonte. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/menu-mobile.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Estilos específicos para la página académica */
+        .page-header {
+            background: var(--gradiente-azul);
+            color: var(--blanco);
+            padding: calc(70px + var(--espaciado-xl)) 0 var(--espaciado-xl);
+            text-align: center;
+        }
+        
+        .page-header__title {
+            font-size: var(--h1-size);
+            font-weight: var(--peso-bold);
+            margin-bottom: var(--espaciado-sm);
+        }
+        
+        .page-header__subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            padding: var(--espaciado-2xl) 0;
+        }
+        
+        .niveles__grid {
+            display: grid;
+            gap: var(--espaciado-xl);
+            grid-template-columns: 1fr;
+        }
+        
+        .nivel {
+            background: var(--blanco);
+            padding: var(--espaciado-xl);
+            border-radius: var(--radio-lg);
+            box-shadow: var(--sombra-sm);
+            text-align: center;
+            border: 1px solid rgba(26, 54, 93, 0.1);
+            transition: var(--transicion-normal);
+        }
+        
+        .nivel:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-lg);
+        }
+        
+        .nivel__icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradiente-azul);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--espaciado-md);
+            color: var(--blanco);
+            font-size: 2rem;
+        }
+        
+        .nivel__title {
+            font-size: var(--h3-size);
+            color: var(--azul);
+            margin-bottom: var(--espaciado-xs);
+        }
+        
+        .nivel__age {
+            color: var(--dorado);
+            font-weight: var(--peso-medio);
+            margin-bottom: var(--espaciado-md);
+        }
+        
+        .nivel__features {
+            text-align: left;
+            margin-bottom: var(--espaciado-lg);
+        }
+        
+        .nivel__features li {
+            padding: 0.25rem 0;
+            color: var(--gris);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .nivel__features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--dorado);
+            font-weight: bold;
+        }
+        
+        .metodologia {
+            background: var(--gris-claro);
+        }
+        
+        .metodologia__content {
+            display: grid;
+            gap: var(--espaciado-xl);
+            align-items: center;
+        }
+        
+        .metodologia__item {
+            display: flex;
+            gap: var(--espaciado-md);
+            margin-bottom: var(--espaciado-lg);
+        }
+        
+        .metodologia__item-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradiente-dorado);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .metodologia__item-content h3 {
+            color: var(--azul);
+            margin-bottom: var(--espaciado-sm);
+        }
+        
+        .programas__grid {
+            display: grid;
+            gap: var(--espaciado-xl);
+            grid-template-columns: 1fr;
+        }
+        
+        .programa {
+            background: var(--blanco);
+            border-radius: var(--radio-lg);
+            overflow: hidden;
+            box-shadow: var(--sombra-sm);
+            transition: var(--transicion-normal);
+        }
+        
+        .programa:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-lg);
+        }
+        
+        .programa__header {
+            background: var(--gradiente-azul);
+            color: var(--blanco);
+            padding: var(--espaciado-lg);
+            text-align: center;
+        }
+        
+        .programa__icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--espaciado-md);
+            font-size: 1.5rem;
+        }
+        
+        .programa__title {
+            font-size: var(--h3-size);
+            margin: 0;
+        }
+        
+        .programa__content {
+            padding: var(--espaciado-lg);
+        }
+        
+        .programa__description {
+            margin-bottom: var(--espaciado-md);
+            color: var(--gris);
+        }
+        
+        .programa__features {
+            list-style: none;
+        }
+        
+        .programa__features li {
+            padding: 0.25rem 0;
+            color: var(--gris-oscuro);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .programa__features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--azul);
+            font-weight: bold;
+        }
+        
+        .horarios {
+            background: var(--gris-claro);
+        }
+        
+        .horarios__content {
+            display: grid;
+            gap: var(--espaciado-xl);
+            align-items: start;
+        }
+        
+        .horario__grid {
+            display: grid;
+            gap: var(--espaciado-lg);
+        }
+        
+        .horario__item {
+            background: var(--blanco);
+            padding: var(--espaciado-lg);
+            border-radius: var(--radio-lg);
+            box-shadow: var(--sombra-sm);
+        }
+        
+        .horario__title {
+            color: var(--azul);
+            margin-bottom: var(--espaciado-md);
+            display: flex;
+            align-items: center;
+            gap: var(--espaciado-sm);
+        }
+        
+        .horario__title i {
+            color: var(--dorado);
+        }
+        
+        .horario__details p {
+            margin-bottom: var(--espaciado-sm);
+        }
+        
+        .cta-card {
+            background: var(--gradiente-azul);
+            color: var(--blanco);
+            padding: var(--espaciado-xl);
+            border-radius: var(--radio-lg);
+            text-align: center;
+        }
+        
+        .cta-card h3 {
+            margin-bottom: var(--espaciado-md);
+        }
+        
+        .cta-card p {
+            margin-bottom: var(--espaciado-lg);
+            opacity: 0.9;
+        }
+        
+        .cta-card .btn--primary {
+            background: var(--blanco);
+            color: var(--azul);
+        }
+        
+        /* Responsive */
+        @media screen and (min-width: 768px) {
+            .page-header__title {
+                font-size: 2.5rem;
+            }
+            
+            .niveles__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .metodologia__content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .programas__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .horarios__content {
+                grid-template-columns: 2fr 1fr;
+            }
+            
+            .horario__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media screen and (min-width: 1024px) {
+            .page-header__title {
+                font-size: 3rem;
+            }
+            
+            .page-header__subtitle {
+                font-size: 1.25rem;
+            }
+            
+            .niveles__grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .programas__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</body>
+</html>

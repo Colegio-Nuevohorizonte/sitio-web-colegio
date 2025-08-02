@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Colegio Nuevo Horizonte</title>
+    <meta name="description" content="Últimas noticias y eventos del Colegio Nuevo Horizonte. Mantente informado sobre actividades, logros y novedades.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/colores-vibrantes.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <img src="../assets/img/Lgo-Nuevo-Horizonte.webp" alt="Colegio Nuevo Horizonte" class="nav__logo-img" loading="lazy">
+                    <span class="nav__logo-text">Colegio Nuevo Horizonte</span>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="../index.html" class="nav__link">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="institucional.html" class="nav__link">Institucional</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="academico.html" class="nav__link">Académico</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="infraestructura.html" class="nav__link">Infraestructura</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="noticias.html" class="nav__link nav__link--active">Noticias</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contacto.html" class="nav__link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">Inicio</a>
+                </li>
+                <li class="breadcrumb__item">
+                    <span class="breadcrumb__separator">/</span>
+                    <span class="breadcrumb__current">Noticias</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Noticias y Eventos</h1>
+                <p class="page-header__subtitle">Mantente informado sobre las últimas novedades de nuestra comunidad educativa</p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="filtros section">
+            <div class="container">
+                <div class="filtros__content">
+                    <h3 class="filtros__title">Filtrar por categoría:</h3>
+                    <div class="filtros__buttons">
+                        <button class="filtro-btn active" data-filter="all">Todas</button>
+                        <button class="filtro-btn" data-filter="academico">Académico</button>
+                        <button class="filtro-btn" data-filter="deportes">Deportes</button>
+                        <button class="filtro-btn" data-filter="eventos">Eventos</button>
+                        <button class="filtro-btn" data-filter="reconocimientos">Reconocimientos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Noticias Destacadas -->
+        <section class="noticias-destacadas section">
+            <div class="container">
+                <h2 class="section__title">Noticias Destacadas</h2>
+                <div class="destacadas__grid">
+                    <!-- Noticia destacada principal -->
+                    <article class="noticia noticia--destacada" data-aos="fade-up">
+                        <div class="noticia__image">
+                            <img src="../assets/img/noticias/noticia-destacada.jpg" alt="Noticia destacada" loading="lazy">
+                            <div class="noticia__category noticia__category--eventos">Eventos</div>
+                        </div>
+                        <div class="noticia__content">
+                            <time class="noticia__date">
+                                <i class="fas fa-calendar"></i>
+                                15 de Julio, 2025
+                            </time>
+                            <h3 class="noticia__title">Ceremonia de Graduación 2025: Celebrando el Éxito de Nuestros Estudiantes</h3>
+                            <p class="noticia__excerpt">
+                                Con gran orgullo celebramos la graduación de 85 estudiantes que culminaron exitosamente su educación secundaria, destacándose por su excelencia académica y compromiso social.
+                            </p>
+                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Noticias secundarias -->
+                    <div class="destacadas__secundarias">
+                        <article class="noticia noticia--secundaria" data-aos="fade-up" data-aos-delay="100">
+                            <div class="noticia__image">
+                                <img src="../assets/img/noticias/torneo-deportivo.jpg" alt="Torneo deportivo" loading="lazy">
+                                <div class="noticia__category noticia__category--deportes">Deportes</div>
+                            </div>
+                            <div class="noticia__content">
+                                <time class="noticia__date">10 de Julio, 2025</time>
+                                <h4 class="noticia__title">Primer Lugar en Torneo Intercolegial de Baloncesto</h4>
+                                <p class="noticia__excerpt">Nuestro equipo de baloncesto masculino se corona campeón...</p>
+                                <a href="#" class="noticia__link">Leer más</a>
+                            </div>
+                        </article>
+
+                        <article class="noticia noticia--secundaria" data-aos="fade-up" data-aos-delay="200">
+                            <div class="noticia__image">
+                                <img src="../assets/img/noticias/feria-ciencias.jpg" alt="Feria de ciencias" loading="lazy">
+                                <div class="noticia__category noticia__category--academico">Académico</div>
+                            </div>
+                            <div class="noticia__content">
+                                <time class="noticia__date">8 de Julio, 2025</time>
+                                <h4 class="noticia__title">Exitosa Feria de Ciencias 2025</h4>
+                                <p class="noticia__excerpt">Estudiantes presentaron proyectos innovadores en robótica...</p>
+                                <a href="#" class="noticia__link">Leer más</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Todas las Noticias -->
+        <section class="todas-noticias section">
+            <div class="container">
+                <h2 class="section__title">Todas las Noticias</h2>
+                <div class="noticias__grid" id="noticias-grid">
+                    <!-- Las noticias se cargarán aquí dinámicamente -->
+                    <article class="noticia" data-category="reconocimientos" data-aos="fade-up">
+                        <div class="noticia__image">
+                            <img src="../assets/img/noticias/reconocimiento-docente.jpg" alt="Reconocimiento docente" loading="lazy">
+                            <div class="noticia__category noticia__category--reconocimientos">Reconocimientos</div>
+                        </div>
+                        <div class="noticia__content">
+                            <time class="noticia__date">5 de Julio, 2025</time>
+                            <h3 class="noticia__title">Profesora María González Recibe Premio Nacional de Excelencia Educativa</h3>
+                            <p class="noticia__excerpt">
+                                Reconocimiento a su dedicación y metodología innovadora en la enseñanza de matemáticas...
+                            </p>
+                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="noticia" data-category="eventos" data-aos="fade-up" data-aos-delay="100">
+                        <div class="noticia__image">
+                            <img src="../assets/img/noticias/dia-familia.jpg" alt="Día de la familia" loading="lazy">
+                            <div class="noticia__category noticia__category--eventos">Eventos</div>
+                        </div>
+                        <div class="noticia__content">
+                            <time class="noticia__date">3 de Julio, 2025</time>
+                            <h3 class="noticia__title">Día de la Familia: Fortaleciendo Lazos Educativos</h3>
+                            <p class="noticia__excerpt">
+                                Más de 500 familias participaron en actividades recreativas y educativas...
+                            </p>
+                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="noticia" data-category="academico" data-aos="fade-up" data-aos-delay="200">
+                        <div class="noticia__image">
+                            <img src="../assets/img/noticias/nuevo-laboratorio.jpg" alt="Nuevo laboratorio" loading="lazy">
+                            <div class="noticia__category noticia__category--academico">Académico</div>
+                        </div>
+                        <div class="noticia__content">
+                            <time class="noticia__date">1 de Julio, 2025</time>
+                            <h3 class="noticia__title">Inauguración del Nuevo Laboratorio de Ciencias</h3>
+                            <p class="noticia__excerpt">
+                                Equipamiento de última tecnología para potenciar la educación científica...
+                            </p>
+                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="noticia" data-category="deportes" data-aos="fade-up" data-aos-delay="300">
+                        <div class="noticia__image">
+                            <img src="../assets/img/noticias/natacion.jpg" alt="Competencia de natación" loading="lazy">
+                            <div class="noticia__category noticia__category--deportes">Deportes</div>
+                        </div>
+                        <div class="noticia__content">
+                            <time class="noticia__date">28 de Junio, 2025</time>
+                            <h3 class="noticia__title">Estudiantes Clasifican para Nacional de Natación</h3>
+                            <p class="noticia__excerpt">
+                                Tres estudiantes logran clasificar para el campeonato nacional tras destacar...
+                            </p>
+                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Paginación -->
+                <div class="paginacion">
+                    <button class="paginacion__btn paginacion__btn--prev" disabled>
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </button>
+                    <div class="paginacion__numeros">
+                        <button class="paginacion__numero active">1</button>
+                        <button class="paginacion__numero">2</button>
+                        <button class="paginacion__numero">3</button>
+                    </div>
+                    <button class="paginacion__btn paginacion__btn--next">
+                        Siguiente <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter section">
+            <div class="container">
+                <div class="newsletter__content">
+                    <div class="newsletter__text">
+                        <h2 class="newsletter__title">¿No te quieres perder ninguna noticia?</h2>
+                        <p class="newsletter__description">
+                            Suscríbete a nuestro boletín y recibe las últimas noticias directamente en tu correo
+                        </p>
+                    </div>
+                    <form class="newsletter__form">
+                        <div class="newsletter__input-group">
+                            <input type="email" placeholder="Tu correo electrónico" class="newsletter__input" required>
+                            <button type="submit" class="newsletter__btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Suscribirme
+                            </button>
+                        </div>
+                        <p class="newsletter__privacy">
+                            Al suscribirte aceptas recibir noticias del colegio. Puedes cancelar en cualquier momento.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <img src="../assets/img/Lgo-Nuevo-Horizonte.webp" alt="Colegio Nuevo Horizonte" class="footer__logo-img" loading="lazy">
+                        <span class="footer__logo-text">Colegio Nuevo Horizonte</span>
+                    </div>
+                    <p class="footer__description">
+                        Formando líderes del mañana con valores sólidos y educación de excelencia.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Enlaces Rápidos</h3>
+                    <ul class="footer__links">
+                        <li><a href="institucional.html" class="footer__link">Sobre Nosotros</a></li>
+                        <li><a href="academico.html" class="footer__link">Programas Académicos</a></li>
+                        <li><a href="infraestructura.html" class="footer__link">Instalaciones</a></li>
+                        <li><a href="noticias.html" class="footer__link">Noticias</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Información</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Admisiones</a></li>
+                        <li><a href="#" class="footer__link">Calendario Escolar</a></li>
+                        <li><a href="noticias.html" class="footer__link">Noticias</a></li>
+                        <li><a href="#" class="footer__link">Eventos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contacto</h3>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Km 10 Acaray, Ciudad del Este</span>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+595 983 660 286</span>
+                        </div>
+                        <div class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@colegionuevohorizonte.edu.py</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 Colegio Nuevo Horizonte. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/menu-mobile.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        // Filtros de noticias
+        document.addEventListener('DOMContentLoaded', function() {
+            const filtros = document.querySelectorAll('.filtro-btn');
+            const noticias = document.querySelectorAll('.noticia[data-category]');
+
+            filtros.forEach(filtro => {
+                filtro.addEventListener('click', function() {
+                    // Remover active de todos los filtros
+                    filtros.forEach(f => f.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const categoria = this.dataset.filter;
+
+                    // Filtrar noticias
+                    noticias.forEach(noticia => {
+                        if (categoria === 'all' || noticia.dataset.category === categoria) {
+                            noticia.style.display = 'block';
+                            noticia.classList.add('fade-in');
+                        } else {
+                            noticia.style.display = 'none';
+                            noticia.classList.remove('fade-in');
+                        }
+                    });
+                });
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter__form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.newsletter__input').value;
+            
+            if (email) {
+                alert('¡Gracias por suscribirte! Recibirás nuestras noticias en ' + email);
+                this.reset();
+            }
+        });
+    </script>
+
+    <style>
+        /* Estilos específicos para la página de noticias */
+        .page-header {
+            background: var(--gradiente-azul);
+            color: var(--blanco);
+            padding: calc(70px + var(--espaciado-xl)) 0 var(--espaciado-xl);
+            text-align: center;
+        }
+        
+        .page-header__title {
+            font-size: var(--h1-size);
+            font-weight: var(--peso-bold);
+            margin-bottom: var(--espaciado-sm);
+        }
+        
+        .page-header__subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            padding: var(--espaciado-2xl) 0;
+        }
+
+        /* Filtros */
+        .filtros {
+            background: var(--gris-claro);
+            padding: var(--espaciado-lg) 0;
+        }
+
+        .filtros__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--espaciado-md);
+        }
+
+        .filtros__title {
+            color: var(--azul);
+            margin: 0;
+        }
+
+        .filtros__buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--espaciado-sm);
+            justify-content: center;
+        }
+
+        .filtro-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--azul);
+            background: transparent;
+            color: var(--azul);
+            border-radius: var(--radio-md);
+            cursor: pointer;
+            transition: var(--transicion-normal);
+            font-weight: var(--peso-medio);
+        }
+
+        .filtro-btn:hover,
+        .filtro-btn.active {
+            background: var(--azul);
+            color: var(--blanco);
+        }
+
+        /* Noticias destacadas */
+        .destacadas__grid {
+            display: grid;
+            gap: var(--espaciado-xl);
+            grid-template-columns: 1fr;
+        }
+
+        .noticia {
+            background: var(--blanco);
+            border-radius: var(--radio-lg);
+            overflow: hidden;
+            box-shadow: var(--sombra-sm);
+            transition: var(--transicion-normal);
+        }
+
+        .noticia:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-lg);
+        }
+
+        .noticia__image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .noticia--destacada .noticia__image {
+            height: 300px;
+        }
+
+        .noticia__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transicion-normal);
+        }
+
+        .noticia:hover .noticia__image img {
+            transform: scale(1.05);
+        }
+
+        .noticia__category {
+            position: absolute;
+            top: var(--espaciado-md);
+            left: var(--espaciado-md);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radio-md);
+            font-size: var(--small-size);
+            font-weight: var(--peso-bold);
+            color: var(--blanco);
+        }
+
+        .noticia__category--academico { background: var(--azul); }
+        .noticia__category--deportes { background: var(--verde); }
+        .noticia__category--eventos { background: var(--dorado); }
+        .noticia__category--reconocimientos { background: #9f7aea; }
+
+        .noticia__content {
+            padding: var(--espaciado-lg);
+        }
+
+        .noticia__date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gris);
+            font-size: var(--small-size);
+            margin-bottom: var(--espaciado-sm);
+        }
+
+        .noticia__title {
+            color: var(--azul);
+            margin-bottom: var(--espaciado-sm);
+            line-height: 1.4;
+        }
+
+        .noticia--destacada .noticia__title {
+            font-size: var(--h3-size);
+        }
+
+        .noticia--secundaria .noticia__title {
+            font-size: 1rem;
+        }
+
+        .noticia__excerpt {
+            color: var(--gris-oscuro);
+            line-height: 1.6;
+            margin-bottom: var(--espaciado-md);
+        }
+
+        .noticia__link {
+            color: var(--dorado);
+            text-decoration: none;
+            font-weight: var(--peso-medio);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transicion-normal);
+        }
+
+        .noticia__link:hover {
+            color: var(--azul);
+        }
+
+        /* Grid de noticias */
+        .noticias__grid {
+            display: grid;
+            gap: var(--espaciado-xl);
+            grid-template-columns: 1fr;
+        }
+
+        .destacadas__secundarias {
+            display: grid;
+            gap: var(--espaciado-lg);
+            grid-template-columns: 1fr;
+        }
+
+        /* Paginación */
+        .paginacion {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--espaciado-md);
+            margin-top: var(--espaciado-2xl);
+        }
+
+        .paginacion__btn {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gris);
+            background: var(--blanco);
+            color: var(--azul);
+            border-radius: var(--radio-md);
+            cursor: pointer;
+            transition: var(--transicion-normal);
+        }
+
+        .paginacion__btn:hover:not(:disabled) {
+            background: var(--azul);
+            color: var(--blanco);
+        }
+
+        .paginacion__btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .paginacion__numeros {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .paginacion__numero {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gris);
+            background: var(--blanco);
+            color: var(--azul);
+            border-radius: var(--radio-md);
+            cursor: pointer;
+            transition: var(--transicion-normal);
+        }
+
+        .paginacion__numero:hover,
+        .paginacion__numero.active {
+            background: var(--azul);
+            color: var(--blanco);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: var(--gradiente-dorado);
+            color: var(--blanco);
+        }
+
+        .newsletter__content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter__title {
+            font-size: var(--h2-size);
+            margin-bottom: var(--espaciado-md);
+        }
+
+        .newsletter__description {
+            margin-bottom: var(--espaciado-xl);
+            opacity: 0.9;
+        }
+
+        .newsletter__input-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--espaciado-md);
+            margin-bottom: var(--espaciado-md);
+        }
+
+        .newsletter__input {
+            padding: 1rem;
+            border: none;
+            border-radius: var(--radio-md);
+            font-size: 1rem;
+        }
+
+        .newsletter__btn {
+            padding: 1rem 2rem;
+            background: var(--azul);
+            color: var(--blanco);
+            border: none;
+            border-radius: var(--radio-md);
+            cursor: pointer;
+            font-weight: var(--peso-bold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: var(--transicion-normal);
+        }
+
+        .newsletter__btn:hover {
+            background: var(--azul-oscuro);
+        }
+
+        .newsletter__privacy {
+            font-size: var(--small-size);
+            opacity: 0.8;
+        }
+
+        /* Animaciones */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media screen and (min-width: 768px) {
+            .page-header__title {
+                font-size: 2.5rem;
+            }
+
+            .filtros__content {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .destacadas__grid {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .destacadas__secundarias {
+                grid-template-columns: 1fr;
+            }
+
+            .noticias__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .newsletter__input-group {
+                flex-direction: row;
+            }
+
+            .newsletter__input {
+                flex: 1;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .page-header__title {
+                font-size: 3rem;
+            }
+
+            .noticias__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</body>
+</html>
