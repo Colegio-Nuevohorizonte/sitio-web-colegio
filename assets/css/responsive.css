@@ -16,7 +16,7 @@
         position: static;
         width: auto;
         height: auto;
-        background: transparent;
+        background: transparent !important; /* Transparente en desktop */
         display: block;
     }
     
@@ -37,13 +37,13 @@
     .nav__link {
         font-size: var(--body-size);
         padding: var(--espaciado-sm) var(--espaciado-md);
-        color: var(--gris-oscuro);
+        color: var(--gris-oscuro) !important; /* Color original en desktop */
     }
     
     .nav__link:hover,
     .nav__link--active {
-        color: var(--azul);
-        background: rgba(26, 54, 93, 0.1);
+        color: var(--azul) !important; /* Azul en hover desktop */
+        background: rgba(26, 54, 93, 0.1) !important;
     }
     
     .nav__link--active::after {
@@ -482,3 +482,7 @@
         background: var(--azul-claro);
     }
 }
+
+    }
+}
+
