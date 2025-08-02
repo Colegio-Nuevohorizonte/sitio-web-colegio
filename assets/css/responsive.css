@@ -37,6 +37,13 @@
     .nav__link {
         font-size: var(--body-size);
         padding: var(--espaciado-sm) var(--espaciado-md);
+        color: var(--gris-oscuro);
+    }
+    
+    .nav__link:hover,
+    .nav__link--active {
+        color: var(--azul);
+        background: rgba(26, 54, 93, 0.1);
     }
     
     .nav__link--active::after {
