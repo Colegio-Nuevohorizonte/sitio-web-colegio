@@ -97,7 +97,7 @@
 .nav__link {
     font-size: 1.125rem;
     font-weight: var(--peso-medio);
-    color: var(--gris-oscuro);
+    color: var(--dorado);
     padding: var(--espaciado-sm) var(--espaciado-md);
     border-radius: var(--radio-md);
     transition: var(--transicion-normal);
@@ -107,8 +107,8 @@
 
 .nav__link:hover,
 .nav__link--active {
-    color: var(--azul);
-    background: rgba(26, 54, 93, 0.1);
+    color: var(--blanco);
+    background: var(--dorado);
 }
 
 .nav__link--active::after {
@@ -391,3 +391,4 @@
     justify-content: center;
     font-weight: var(--peso-semi);
 }
+
