@@ -87,11 +87,6 @@ type Collection {
 
 union DocumentNode = Noticias | Folder
 
-type NoticiasGaleria {
-  imagen: String
-  alt: String
-}
-
 type Noticias implements Node & Document {
   titulo: String!
   fecha: String!
@@ -102,7 +97,6 @@ type Noticias implements Node & Document {
   autor: String!
   estado: String!
   contenido: JSON!
-  galeria: [NoticiasGaleria]
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -141,11 +135,6 @@ input RichTextFilter {
   exists: Boolean
 }
 
-input NoticiasGaleriaFilter {
-  imagen: ImageFilter
-  alt: StringFilter
-}
-
 input NoticiasFilter {
   titulo: StringFilter
   fecha: DatetimeFilter
@@ -156,7 +145,6 @@ input NoticiasFilter {
   autor: StringFilter
   estado: StringFilter
   contenido: RichTextFilter
-  galeria: NoticiasGaleriaFilter
 }
 
 type NoticiasConnectionEdges {
@@ -189,11 +177,6 @@ input DocumentMutation {
   noticias: NoticiasMutation
 }
 
-input NoticiasGaleriaMutation {
-  imagen: String
-  alt: String
-}
-
 input NoticiasMutation {
   titulo: String
   fecha: String
@@ -204,7 +187,6 @@ input NoticiasMutation {
   autor: String
   estado: String
   contenido: JSON
-  galeria: [NoticiasGaleriaMutation]
 }
 
 schema {

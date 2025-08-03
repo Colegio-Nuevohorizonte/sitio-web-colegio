@@ -165,12 +165,6 @@ export type CollectionDocumentsArgs = {
 
 export type DocumentNode = Noticias | Folder;
 
-export type NoticiasGaleria = {
-  __typename?: 'NoticiasGaleria';
-  imagen?: Maybe<Scalars['String']['output']>;
-  alt?: Maybe<Scalars['String']['output']>;
-};
-
 export type Noticias = Node & Document & {
   __typename?: 'Noticias';
   titulo: Scalars['String']['output'];
@@ -182,7 +176,6 @@ export type Noticias = Node & Document & {
   autor: Scalars['String']['output'];
   estado: Scalars['String']['output'];
   contenido: Scalars['JSON']['output'];
-  galeria?: Maybe<Array<Maybe<NoticiasGaleria>>>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -221,11 +214,6 @@ export type RichTextFilter = {
   exists?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
-export type NoticiasGaleriaFilter = {
-  imagen?: InputMaybe<ImageFilter>;
-  alt?: InputMaybe<StringFilter>;
-};
-
 export type NoticiasFilter = {
   titulo?: InputMaybe<StringFilter>;
   fecha?: InputMaybe<DatetimeFilter>;
@@ -236,7 +224,6 @@ export type NoticiasFilter = {
   autor?: InputMaybe<StringFilter>;
   estado?: InputMaybe<StringFilter>;
   contenido?: InputMaybe<RichTextFilter>;
-  galeria?: InputMaybe<NoticiasGaleriaFilter>;
 };
 
 export type NoticiasConnectionEdges = {
@@ -317,11 +304,6 @@ export type DocumentMutation = {
   noticias?: InputMaybe<NoticiasMutation>;
 };
 
-export type NoticiasGaleriaMutation = {
-  imagen?: InputMaybe<Scalars['String']['input']>;
-  alt?: InputMaybe<Scalars['String']['input']>;
-};
-
 export type NoticiasMutation = {
   titulo?: InputMaybe<Scalars['String']['input']>;
   fecha?: InputMaybe<Scalars['String']['input']>;
@@ -332,17 +314,16 @@ export type NoticiasMutation = {
   autor?: InputMaybe<Scalars['String']['input']>;
   estado?: InputMaybe<Scalars['String']['input']>;
   contenido?: InputMaybe<Scalars['JSON']['input']>;
-  galeria?: InputMaybe<Array<InputMaybe<NoticiasGaleriaMutation>>>;
 };
 
-export type NoticiasPartsFragment = { __typename: 'Noticias', titulo: string, fecha: string, categoria: string, imagen: string, resumen: string, destacada?: boolean | null, autor: string, estado: string, contenido: any, galeria?: Array<{ __typename: 'NoticiasGaleria', imagen?: string | null, alt?: string | null } | null> | null };
+export type NoticiasPartsFragment = { __typename: 'Noticias', titulo: string, fecha: string, categoria: string, imagen: string, resumen: string, destacada?: boolean | null, autor: string, estado: string, contenido: any };
 
 export type NoticiasQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type NoticiasQuery = { __typename?: 'Query', noticias: { __typename: 'Noticias', id: string, titulo: string, fecha: string, categoria: string, imagen: string, resumen: string, destacada?: boolean | null, autor: string, estado: string, contenido: any, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, galeria?: Array<{ __typename: 'NoticiasGaleria', imagen?: string | null, alt?: string | null } | null> | null } };
+export type NoticiasQuery = { __typename?: 'Query', noticias: { __typename: 'Noticias', id: string, titulo: string, fecha: string, categoria: string, imagen: string, resumen: string, destacada?: boolean | null, autor: string, estado: string, contenido: any, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type NoticiasConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -354,7 +335,7 @@ export type NoticiasConnectionQueryVariables = Exact<{
 }>;
 
 
-export type NoticiasConnectionQuery = { __typename?: 'Query', noticiasConnection: { __typename?: 'NoticiasConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'NoticiasConnectionEdges', cursor: string, node?: { __typename: 'Noticias', id: string, titulo: string, fecha: string, categoria: string, imagen: string, resumen: string, destacada?: boolean | null, autor: string, estado: string, contenido: any, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, galeria?: Array<{ __typename: 'NoticiasGaleria', imagen?: string | null, alt?: string | null } | null> | null } | null } | null> | null } };
+export type NoticiasConnectionQuery = { __typename?: 'Query', noticiasConnection: { __typename?: 'NoticiasConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'NoticiasConnectionEdges', cursor: string, node?: { __typename: 'Noticias', id: string, titulo: string, fecha: string, categoria: string, imagen: string, resumen: string, destacada?: boolean | null, autor: string, estado: string, contenido: any, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const NoticiasPartsFragmentDoc = gql`
     fragment NoticiasParts on Noticias {
@@ -368,11 +349,6 @@ export const NoticiasPartsFragmentDoc = gql`
   autor
   estado
   contenido
-  galeria {
-    __typename
-    imagen
-    alt
-  }
 }
     `;
 export const NoticiasDocument = gql`

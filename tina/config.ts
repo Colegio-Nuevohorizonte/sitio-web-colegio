@@ -1,23 +1,22 @@
 import { defineConfig } from "tinacms";
 
-// Para GitHub Pages usamos la rama main
-const branch = "main";
-
 export default defineConfig({
-  branch,
-  clientId: "83be6128-79a5-4658-8e2a-6f5e60de07e0", // Get this from tina.io
-  token: "662651dd02eaff2fb815d9fc480baebedd681067", // Get this from tina.io
-
+  branch: "main",
+  clientId: "83be6128-79a5-4658-8e2a-6f5e60de07e0",
+  token: "662651dd02eaff2fb815d9fc480baebedd681067",
+  
   build: {
     outputFolder: "admin",
     publicFolder: ".",
   },
+  
   media: {
     tina: {
       mediaRoot: "assets/img/noticias",
       publicFolder: ".",
     },
   },
+  
   schema: {
     collections: [
       {
@@ -25,27 +24,19 @@ export default defineConfig({
         label: "Noticias",
         path: "content/noticias",
         format: "mdx",
-        ui: {
-          router: ({ document }) => {
-            return `/noticias/${document._sys.filename}`;
-          },
-        },
         fields: [
           {
             type: "string",
             name: "titulo",
-            label: "Título de la Noticia",
+            label: "Título",
             isTitle: true,
             required: true,
           },
           {
             type: "datetime",
             name: "fecha",
-            label: "Fecha de Publicación",
+            label: "Fecha",
             required: true,
-            ui: {
-              dateFormat: "DD/MM/YYYY",
-            },
           },
           {
             type: "string",
@@ -72,27 +63,18 @@ export default defineConfig({
             required: true,
             ui: {
               component: "textarea",
-              validate: (value) => {
-                if (value && value.length > 200) {
-                  return "El resumen no puede tener más de 200 caracteres";
-                }
-              },
             },
           },
           {
             type: "boolean",
             name: "destacada",
-            label: "¿Es noticia destacada?",
-            description: "Las noticias destacadas aparecen en la sección principal",
+            label: "¿Es destacada?",
           },
           {
             type: "string",
             name: "autor",
             label: "Autor",
             required: true,
-            ui: {
-              defaultValue: "Colegio Nuevo Horizonte",
-            },
           },
           {
             type: "string",
@@ -102,36 +84,14 @@ export default defineConfig({
             options: [
               { value: "borrador", label: "Borrador" },
               { value: "publicado", label: "Publicado" },
-              { value: "archivado", label: "Archivado" },
             ],
-            ui: {
-              defaultValue: "borrador",
-            },
           },
           {
             type: "rich-text",
             name: "contenido",
-            label: "Contenido de la Noticia",
+            label: "Contenido",
             isBody: true,
             required: true,
-          },
-          {
-            type: "object",
-            name: "galeria",
-            label: "Galería de Imágenes (Opcional)",
-            list: true,
-            fields: [
-              {
-                type: "image",
-                name: "imagen",
-                label: "Imagen",
-              },
-              {
-                type: "string",
-                name: "alt",
-                label: "Descripción de la imagen",
-              },
-            ],
           },
         ],
       },

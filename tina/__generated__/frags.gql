@@ -9,9 +9,4 @@ fragment NoticiasParts on Noticias {
   autor
   estado
   contenido
-  galeria {
-    __typename
-    imagen
-    alt
-  }
 }

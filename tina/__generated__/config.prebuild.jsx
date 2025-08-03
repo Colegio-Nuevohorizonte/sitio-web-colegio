@@ -1,12 +1,9 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
-var branch = "main";
 var config_default = defineConfig({
-  branch,
+  branch: "main",
   clientId: "83be6128-79a5-4658-8e2a-6f5e60de07e0",
-  // Get this from tina.io
   token: "662651dd02eaff2fb815d9fc480baebedd681067",
-  // Get this from tina.io
   build: {
     outputFolder: "admin",
     publicFolder: "."
@@ -24,27 +21,19 @@ var config_default = defineConfig({
         label: "Noticias",
         path: "content/noticias",
         format: "mdx",
-        ui: {
-          router: ({ document }) => {
-            return `/noticias/${document._sys.filename}`;
-          }
-        },
         fields: [
           {
             type: "string",
             name: "titulo",
-            label: "T\xEDtulo de la Noticia",
+            label: "T\xEDtulo",
             isTitle: true,
             required: true
           },
           {
             type: "datetime",
             name: "fecha",
-            label: "Fecha de Publicaci\xF3n",
-            required: true,
-            ui: {
-              dateFormat: "DD/MM/YYYY"
-            }
+            label: "Fecha",
+            required: true
           },
           {
             type: "string",
@@ -70,28 +59,19 @@ var config_default = defineConfig({
             label: "Resumen",
             required: true,
             ui: {
-              component: "textarea",
-              validate: (value) => {
-                if (value && value.length > 200) {
-                  return "El resumen no puede tener m\xE1s de 200 caracteres";
-                }
-              }
+              component: "textarea"
             }
           },
           {
             type: "boolean",
             name: "destacada",
-            label: "\xBFEs noticia destacada?",
-            description: "Las noticias destacadas aparecen en la secci\xF3n principal"
+            label: "\xBFEs destacada?"
           },
           {
             type: "string",
             name: "autor",
             label: "Autor",
-            required: true,
-            ui: {
-              defaultValue: "Colegio Nuevo Horizonte"
-            }
+            required: true
           },
           {
             type: "string",
@@ -100,37 +80,15 @@ var config_default = defineConfig({
             required: true,
             options: [
               { value: "borrador", label: "Borrador" },
-              { value: "publicado", label: "Publicado" },
-              { value: "archivado", label: "Archivado" }
-            ],
-            ui: {
-              defaultValue: "borrador"
-            }
+              { value: "publicado", label: "Publicado" }
+            ]
           },
           {
             type: "rich-text",
             name: "contenido",
-            label: "Contenido de la Noticia",
+            label: "Contenido",
             isBody: true,
             required: true
-          },
-          {
-            type: "object",
-            name: "galeria",
-            label: "Galer\xEDa de Im\xE1genes (Opcional)",
-            list: true,
-            fields: [
-              {
-                type: "image",
-                name: "imagen",
-                label: "Imagen"
-              },
-              {
-                type: "string",
-                name: "alt",
-                label: "Descripci\xF3n de la imagen"
-              }
-            ]
           }
         ]
       }
