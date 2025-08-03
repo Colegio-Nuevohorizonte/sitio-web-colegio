@@ -1,26 +1,26 @@
 [
   {
+    "id": "bienvenida-sitio-webx",
+    "titulo": "¡Bienvenidos a nuestro nuevo sitio web!",
+    "fecha": "2025-08-03T10:00:00.000Z",
+    "categoria": "institucional",
+    "imagen": "../assets/img/noticias/nuevo-sitio-web.jpg",
+    "resumen": "Nos complace presentar nuestro renovado sitio web con nuevas funcionalidades para mantenerte informado sobre todas las actividades de nuestra comunidad educativa.",
+    "destacada": true,
+    "autor": "Colegio Nuevo Horizonte",
+    "contenido": "\n## ¡Estrenamos sitio web!\n\nNos complace anunciar el lanzamiento de nuestro **nuevo sitio web institucional**, diseñado especialmente para brindar una mejor experiencia a toda nuestra comunidad educativa.\n\n### 🌟 Nuevas funcionalidades\n\n- **Noticias actualizadas** - Mantente al día con todos los eventos y actividades\n- **Información institucional** - Conoce más sobre nuestra propuesta educativa\n- **Contacto directo** - Formularios para consultas y solicitudes\n- **Diseño responsive** - Optimizado para computadoras, tablets y móviles\n\n### 📱 Fácil navegación\n\nEl nuevo sitio cuenta con una navegación intuitiva que te permitirá encontrar rápidamente:\n\n- Información sobre nuestros **programas académicos**\n- **Instalaciones y infraestructura** del colegio\n- **Noticias y eventos** de la comunidad educativa\n- **Datos de contacto** y formularios de consulta\n\n### 🎯 Diseñado para ti\n\nHemos desarrollado este sitio pensando en las necesidades de:\n\n- **Padres de familia** que buscan información sobre admisiones\n- **Estudiantes** que quieren mantenerse informados\n- **Docentes** y personal administrativo\n- **Comunidad en general** interesada en conocer nuestra institución\n\n### 📞 ¿Necesitas ayuda?\n\nSi tienes alguna consulta sobre el uso del sitio web o necesitas información adicional, no dudes en contactarnos:\n\n- **Email:** info@colegionuevohorizonte.edu.py\n- **Teléfono:** +595 983 660 286\n- **Dirección:** Km 10 Acaray, Ciudad del Este\n\n---\n\n*¡Explora todas las secciones de nuestro nuevo sitio y mantente conectado con la familia del Colegio Nuevo Horizonte!*\n",
+    "galeria": []
+  },
+  {
     "id": "inicio-ano-escolar-2025x",
     "titulo": "Inicio del Año Escolar 2025",
     "fecha": "2025-08-03T10:00:00.000Z",
-    "categoria": "eventos",
+    "categoria": "actividades",
     "imagen": "../assets/img/noticias/inicio-2025.jpg",
     "resumen": "El Colegio Nuevo Horizonte da la bienvenida al nuevo año escolar 2025 con grandes expectativas y nuevos proyectos educativos.",
     "destacada": true,
     "autor": "Colegio Nuevo Horizonte",
     "contenido": "\n# ¡Bienvenidos al Año Escolar 2025!\n\nEl Colegio Nuevo Horizonte abre sus puertas para dar inicio a un nuevo ciclo académico lleno de oportunidades, desafíos y proyectos educativos innovadores.\n\n## Nuevas Iniciativas 2025\n\nEste año implementamos:\n\n- **Laboratorio de Ciencias renovado** - Con equipos de última generación\n- **Programa de Inglés intensivo** - Para fortalecer el bilingüismo\n- **Talleres de robótica** - Introduciendo la tecnología educativa\n- **Huerta escolar** - Promoviendo la educación ambiental\n\n## Calendario de Actividades\n\n### Agosto 2025\n- **5 de agosto**: Reunión de padres de familia\n- **10 de agosto**: Inicio oficial de clases\n- **15 de agosto**: Feria de talentos estudiantiles\n\n## Mensaje del Director\n\n*\"Estamos comprometidos en brindar una educación integral que prepare a nuestros estudiantes para los desafíos del futuro, manteniendo siempre nuestros valores institucionales de excelencia, respeto y compromiso social.\"*\n\n---\n\n**Para más información sobre matrículas y programas académicos, contáctanos en info@colegionuevohorizonte.edu.py**\n",
-    "galeria": []
-  },
-  {
-    "id": "prueba-1-porfinx",
-    "titulo": "te odio tinacmss",
-    "fecha": "2025-08-03T10:00:00.000Z",
-    "categoria": "eventos",
-    "imagen": "../assets/img/noticias/inicio-2025.jpg",
-    "resumen": "CASI ME DA UN COLAPSO.",
-    "destacada": true,
-    "autor": "Colegio Nuevo Horizonte",
-    "contenido": "\n# ¡Bienvenidos al Año Escolar 2025!\n\nEl Colegio Nuevo Horizonte abre sus puertas para dar inicio a un nuevo ciclo académico lleno de oportunidades, desafíos y proyectos educativos innovadores.\n\n## Nuevas Iniciativas 2025\n\nEste año implementamos:\n\n- **Laboratorio de Ciencias renovado** - Con equipos de última generación\n- **Programa de Inglés intensivo** - Para fortalecer el bilingüismo\n- **Talleres de robótica** - Introduciendo la tecnología educativa\n- **Huerta escolar** - Promoviendo la educación ambiental\n\n## Calendario de Actividades\n\n### Agosto 2025\n- **5 de agosto**: Reunión de padres de familia\n- **10 de agosto**: Inicio oficial de clases\n- **15 de agosto**: Feria de talentos estudiantiles\n\n## Mensaje del Director\n\n*\"Estamos comprometidos en brindar una educación integral que prepare a nuestros estudiantes para los desafíos del futuro, manteniendo siempre nuestros valores institucionales de excelencia, respeto y compromiso social.\"*\n\n---\n",
     "galeria": []
   },
   {

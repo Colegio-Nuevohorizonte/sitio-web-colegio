@@ -7,7 +7,7 @@
     "serve": "python -m http.server 8000",
     "build-noticias": "python scripts/procesar-noticias.py",
     "build-noticias-node": "node scripts/procesar-noticias.js",
-    "nueva-noticia": "node scripts/crear-noticia.js"
+    "nueva-noticia": "python scripts/crear-noticia.py"
   },
   "dependencies": {
     "gray-matter": "^4.0.3"

@@ -85,22 +85,6 @@
             </div>
         </section>
 
-        <!-- Filtros -->
-        <section class="filtros section">
-            <div class="container">
-                <div class="filtros__content">
-                    <h3 class="filtros__title">Filtrar por categoría:</h3>
-                    <div class="filtros__buttons">
-                        <button class="filtro-btn active" data-filter="all">Todas</button>
-                        <button class="filtro-btn" data-filter="academico">Académico</button>
-                        <button class="filtro-btn" data-filter="deportes">Deportes</button>
-                        <button class="filtro-btn" data-filter="eventos">Eventos</button>
-                        <button class="filtro-btn" data-filter="reconocimientos">Reconocimientos</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Noticias Destacadas -->
         <section class="destacadas section">
             <!-- Se llenarán dinámicamente -->
@@ -310,33 +294,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script>
-        // Filtros de noticias
-        document.addEventListener('DOMContentLoaded', function() {
-            const filtros = document.querySelectorAll('.filtro-btn');
-            const noticias = document.querySelectorAll('.noticia[data-category]');
-
-            filtros.forEach(filtro => {
-                filtro.addEventListener('click', function() {
-                    // Remover active de todos los filtros
-                    filtros.forEach(f => f.classList.remove('active'));
-                    this.classList.add('active');
-
-                    const categoria = this.dataset.filter;
-
-                    // Filtrar noticias
-                    noticias.forEach(noticia => {
-                        if (categoria === 'all' || noticia.dataset.category === categoria) {
-                            noticia.style.display = 'block';
-                            noticia.classList.add('fade-in');
-                        } else {
-                            noticia.style.display = 'none';
-                            noticia.classList.remove('fade-in');
-                        }
-                    });
-                });
-            });
-        });
-
         // Newsletter form
         document.querySelector('.newsletter__form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -373,48 +330,6 @@
         
         .section {
             padding: var(--espaciado-2xl) 0;
-        }
-
-        /* Filtros */
-        .filtros {
-            background: var(--gris-claro);
-            padding: var(--espaciado-lg) 0;
-        }
-
-        .filtros__content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: var(--espaciado-md);
-        }
-
-        .filtros__title {
-            color: var(--azul);
-            margin: 0;
-        }
-
-        .filtros__buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--espaciado-sm);
-            justify-content: center;
-        }
-
-        .filtro-btn {
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--azul);
-            background: transparent;
-            color: var(--azul);
-            border-radius: var(--radio-md);
-            cursor: pointer;
-            transition: var(--transicion-normal);
-            font-weight: var(--peso-medio);
-        }
-
-        .filtro-btn:hover,
-        .filtro-btn.active {
-            background: var(--azul);
-            color: var(--blanco);
         }
 
         /* Noticias destacadas */
