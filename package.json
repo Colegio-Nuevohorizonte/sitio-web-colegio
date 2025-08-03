@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "serve": "python -m http.server 8000",
-    "build-noticias": "node scripts/procesar-noticias.js",
+    "build-noticias": "python scripts/procesar-noticias.py",
+    "build-noticias-node": "node scripts/procesar-noticias.js",
     "nueva-noticia": "node scripts/crear-noticia.js"
   },
   "dependencies": {

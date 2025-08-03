@@ -102,59 +102,8 @@
         </section>
 
         <!-- Noticias Destacadas -->
-        <section class="noticias-destacadas section">
-            <div class="container">
-                <h2 class="section__title">Noticias Destacadas</h2>
-                <div class="destacadas__grid">
-                    <!-- Noticia destacada principal -->
-                    <article class="noticia noticia--destacada" data-aos="fade-up">
-                        <div class="noticia__image">
-                            <img src="../assets/img/noticias/noticia-destacada.jpg" alt="Noticia destacada" loading="lazy">
-                            <div class="noticia__category noticia__category--eventos">Eventos</div>
-                        </div>
-                        <div class="noticia__content">
-                            <time class="noticia__date">
-                                <i class="fas fa-calendar"></i>
-                                15 de Julio, 2025
-                            </time>
-                            <h3 class="noticia__title">Ceremonia de Graduación 2025: Celebrando el Éxito de Nuestros Estudiantes</h3>
-                            <p class="noticia__excerpt">
-                                Con gran orgullo celebramos la graduación de 85 estudiantes que culminaron exitosamente su educación secundaria, destacándose por su excelencia académica y compromiso social.
-                            </p>
-                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <!-- Noticias secundarias -->
-                    <div class="destacadas__secundarias">
-                        <article class="noticia noticia--secundaria" data-aos="fade-up" data-aos-delay="100">
-                            <div class="noticia__image">
-                                <img src="../assets/img/noticias/torneo-deportivo.jpg" alt="Torneo deportivo" loading="lazy">
-                                <div class="noticia__category noticia__category--deportes">Deportes</div>
-                            </div>
-                            <div class="noticia__content">
-                                <time class="noticia__date">10 de Julio, 2025</time>
-                                <h4 class="noticia__title">Primer Lugar en Torneo Intercolegial de Baloncesto</h4>
-                                <p class="noticia__excerpt">Nuestro equipo de baloncesto masculino se corona campeón...</p>
-                                <a href="#" class="noticia__link">Leer más</a>
-                            </div>
-                        </article>
-
-                        <article class="noticia noticia--secundaria" data-aos="fade-up" data-aos-delay="200">
-                            <div class="noticia__image">
-                                <img src="../assets/img/noticias/feria-ciencias.jpg" alt="Feria de ciencias" loading="lazy">
-                                <div class="noticia__category noticia__category--academico">Académico</div>
-                            </div>
-                            <div class="noticia__content">
-                                <time class="noticia__date">8 de Julio, 2025</time>
-                                <h4 class="noticia__title">Exitosa Feria de Ciencias 2025</h4>
-                                <p class="noticia__excerpt">Estudiantes presentaron proyectos innovadores en robótica...</p>
-                                <a href="#" class="noticia__link">Leer más</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+        <section class="destacadas section">
+            <!-- Se llenarán dinámicamente -->
         </section>
 
         <!-- Todas las Noticias -->
@@ -163,7 +112,6 @@
                 <h2 class="section__title">Todas las Noticias</h2>
                 <div class="noticias__grid" id="noticias-grid">
                     <!-- Las noticias se cargarán aquí dinámicamente -->
-                    <article class="noticia" data-category="reconocimientos" data-aos="fade-up">
                         <div class="noticia__image">
                             <img src="../assets/img/noticias/reconocimiento-docente.jpg" alt="Reconocimiento docente" loading="lazy">
                             <div class="noticia__category noticia__category--reconocimientos">Reconocimientos</div>
@@ -749,5 +697,139 @@
             }
         }
     </style>
+
+    <!-- JavaScript para cargar noticias -->
+    <script>
+        // Cargar y mostrar noticias
+        async function cargarNoticias() {
+            try {
+                const response = await fetch('../assets/js/noticias.json');
+                const noticias = await response.json();
+                
+                mostrarNoticiasDestacadas(noticias.filter(noticia => noticia.destacada));
+                mostrarTodasLasNoticias(noticias);
+                
+                setupFiltros(noticias);
+            } catch (error) {
+                console.error('Error cargando noticias:', error);
+                document.getElementById('noticias-grid').innerHTML = 
+                    '<p style="text-align: center; color: #666;">Error cargando las noticias. Por favor, intenta más tarde.</p>';
+            }
+        }
+
+        function mostrarNoticiasDestacadas(noticiasDestacadas) {
+            const destacadasSection = document.querySelector('.destacadas');
+            if (!destacadasSection || noticiasDestacadas.length === 0) return;
+
+            const principal = noticiasDestacadas[0];
+            const secundarias = noticiasDestacadas.slice(1, 3);
+
+            destacadasSection.innerHTML = `
+                <div class="container">
+                    <h2 class="section__title">Noticias Destacadas</h2>
+                    <div class="destacadas__grid">
+                        <article class="destacada-principal">
+                            <div class="destacada-principal__image">
+                                <img src="${principal.imagen}" alt="${principal.titulo}" loading="lazy">
+                            </div>
+                            <div class="destacada-principal__content">
+                                <span class="destacada-principal__category">${principal.categoria}</span>
+                                <h3 class="destacada-principal__title">${principal.titulo}</h3>
+                                <p class="destacada-principal__excerpt">${principal.resumen}</p>
+                                <div class="destacada-principal__meta">
+                                    <span class="destacada-principal__date">${formatearFecha(principal.fecha)}</span>
+                                    <span class="destacada-principal__author">Por ${principal.autor}</span>
+                                </div>
+                                <button class="btn btn--primary" onclick="verNoticia('${principal.id}')">Leer más</button>
+                            </div>
+                        </article>
+                        
+                        <div class="destacadas__secundarias">
+                            ${secundarias.map(noticia => `
+                                <article class="destacada-secundaria">
+                                    <div class="destacada-secundaria__image">
+                                        <img src="${noticia.imagen}" alt="${noticia.titulo}" loading="lazy">
+                                    </div>
+                                    <div class="destacada-secundaria__content">
+                                        <span class="destacada-secundaria__category">${noticia.categoria}</span>
+                                        <h4 class="destacada-secundaria__title">${noticia.titulo}</h4>
+                                        <span class="destacada-secundaria__date">${formatearFecha(noticia.fecha)}</span>
+                                        <button class="btn btn--outline btn--small" onclick="verNoticia('${noticia.id}')">Leer más</button>
+                                    </div>
+                                </article>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function mostrarTodasLasNoticias(noticias) {
+            const grid = document.getElementById('noticias-grid');
+            
+            grid.innerHTML = noticias.map(noticia => `
+                <article class="noticia-card" data-category="${noticia.categoria}">
+                    <div class="noticia-card__image">
+                        <img src="${noticia.imagen}" alt="${noticia.titulo}" loading="lazy">
+                        <span class="noticia-card__category">${noticia.categoria}</span>
+                    </div>
+                    <div class="noticia-card__content">
+                        <h3 class="noticia-card__title">${noticia.titulo}</h3>
+                        <p class="noticia-card__excerpt">${noticia.resumen}</p>
+                        <div class="noticia-card__meta">
+                            <span class="noticia-card__date">${formatearFecha(noticia.fecha)}</span>
+                            <span class="noticia-card__author">Por ${noticia.autor}</span>
+                        </div>
+                        <button class="btn btn--outline" onclick="verNoticia('${noticia.id}')">Leer completa</button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function setupFiltros(noticias) {
+            const filtros = document.querySelectorAll('.filtro-btn');
+            const grid = document.getElementById('noticias-grid');
+
+            filtros.forEach(filtro => {
+                filtro.addEventListener('click', () => {
+                    // Actualizar botón activo
+                    filtros.forEach(f => f.classList.remove('active'));
+                    filtro.classList.add('active');
+
+                    const categoria = filtro.dataset.filter;
+                    const noticiasFiltradas = categoria === 'all' 
+                        ? noticias 
+                        : noticias.filter(noticia => noticia.categoria === categoria);
+
+                    mostrarTodasLasNoticias(noticiasFiltradas);
+                });
+            });
+        }
+
+        function formatearFecha(fechaISO) {
+            const fecha = new Date(fechaISO);
+            return fecha.toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function verNoticia(id) {
+            // Por ahora, mostrar el contenido en un alert (puedes mejorarlo con un modal)
+            fetch('../assets/js/noticias.json')
+                .then(response => response.json())
+                .then(noticias => {
+                    const noticia = noticias.find(n => n.id === id);
+                    if (noticia) {
+                        // Crear modal o página de detalle
+                        alert(`Noticia: ${noticia.titulo}\n\n${noticia.contenido.substring(0, 200)}...`);
+                    }
+                });
+        }
+
+        // Cargar noticias cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', cargarNoticias);
+    </script>
 </body>
 </html>
