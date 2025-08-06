@@ -22,17 +22,5 @@
     "autor": "Colegio Nuevo Horizonte",
     "contenido": "\r\n## ¡Estrenamos sitio web!\r\n\r\nNos complace anunciar el lanzamiento de nuestro **nuevo sitio web institucional**, diseñado especialmente para brindar una mejor experiencia a toda nuestra comunidad educativa.\r\n\r\n### 🌟 Nuevas funcionalidades\r\n\r\n- **Noticias actualizadas** - Mantente al día con todos los eventos y actividades\r\n- **Información institucional** - Conoce más sobre nuestra propuesta educativa\r\n- **Contacto directo** - Formularios para consultas y solicitudes\r\n- **Diseño responsive** - Optimizado para computadoras, tablets y móviles\r\n\r\n### 📱 Fácil navegación\r\n\r\nEl nuevo sitio cuenta con una navegación intuitiva que te permitirá encontrar rápidamente:\r\n\r\n- Información sobre nuestros **programas académicos**\r\n- **Instalaciones y infraestructura** del colegio\r\n- **Noticias y eventos** de la comunidad educativa\r\n- **Datos de contacto** y formularios de consulta\r\n\r\n### 🎯 Diseñado para ti\r\n\r\nHemos desarrollado este sitio pensando en las necesidades de:\r\n\r\n- **Padres de familia** que buscan información sobre admisiones\r\n- **Estudiantes** que quieren mantenerse informados\r\n- **Docentes** y personal administrativo\r\n- **Comunidad en general** interesada en conocer nuestra institución\r\n\r\n### 📞 ¿Necesitas ayuda?\r\n\r\nSi tienes alguna consulta sobre el uso del sitio web o necesitas información adicional, no dudes en contactarnos:\r\n\r\n- **Email:** nuevohorizontecolegio87@gmail.com\r\n- **Teléfono:** +595 983 660 286\r\n- **Dirección:** Km 10 Acaray, Ciudad del Este\r\n\r\n---\r\n\r\n*¡Explora todas las secciones de nuestro nuevo sitio y mantente conectado con la familia del Colegio Nuevo Horizonte!*\r\n",
     "galeria": []
-  },
-  {
-    "id": "_plantilla-recordatorio",
-    "titulo": "Recordatorio: [TÍTULO DEL EVENTO/FECHA FESTIVA]",
-    "fecha": "2025-XX-XXTXX:XX:XX.000Z",
-    "categoria": "recordatorios",
-    "imagen": "../assets/img/noticias/recordatorio-director.jpg",
-    "resumen": "[Breve descripción del recordatorio o evento]",
-    "destacada": false,
-    "autor": "Dirección - Colegio Nuevo Horizonte",
-    "contenido": "\r\n# 📢 Recordatorio Importante\r\n\r\n**Estimadas familias del Colegio Nuevo Horizonte:**\r\n\r\n[MENSAJE PRINCIPAL DEL DIRECTOR]\r\n\r\n## 📅 Información del Evento/Fecha\r\n\r\n- **Fecha**: [Día, DD de Mes de YYYY]\r\n- **Hora**: [HH:MM]\r\n- **Lugar**: [Ubicación si aplica]\r\n- **Dirigido a**: [Toda la comunidad/Estudiantes específicos/Padres]\r\n\r\n## ⚠️ Importante Recordar\r\n\r\n- [Punto importante 1]\r\n- [Punto importante 2]\r\n- [Punto importante 3]\r\n\r\n## 📞 Contacto\r\n\r\nPara consultas adicionales, pueden comunicarse con:\r\n- **Dirección**: nuevohorizontecolegio87@gmail.com\r\n- **Teléfono**: +595 983 660 286\r\n\r\n---\r\n\r\n**Atentamente,**  \r\n**Dirección General**  \r\n*Colegio Nuevo Horizonte*\r\n",
-    "galeria": []
   }
 ]

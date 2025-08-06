@@ -14,7 +14,7 @@ function procesarNoticias() {
     // Procesar noticias de TinaCMS (content/noticias)
     if (fs.existsSync(noticiasDir)) {
         const archivos = fs.readdirSync(noticiasDir).filter(file => 
-            file.endsWith('.md') || file.endsWith('.mdx')
+            (file.endsWith('.md') || file.endsWith('.mdx')) && !file.startsWith('_')
         );
         
         archivos.forEach(archivo => {
