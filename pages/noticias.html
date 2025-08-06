@@ -140,9 +140,11 @@
                             Suscríbete a nuestro boletín y recibe las últimas noticias directamente en tu correo
                         </p>
                     </div>
-                    <form class="newsletter__form">
+                    <form class="newsletter__form" method="POST" action="https://formsubmit.co/nuevohorizontecolegio87@gmail.com">
+                        <input type="hidden" name="_subject" value="Nueva suscripción al boletín - Colegio Nuevo Horizonte">
+                        <input type="hidden" name="_next" value="https://colegio-nuevohorizonte.github.io/sitio-web-colegio/pages/gracias.html">
                         <div class="newsletter__input-group">
-                            <input type="email" placeholder="Tu correo electrónico" class="newsletter__input" required>
+                            <input type="email" name="email" placeholder="Tu correo electrónico" class="newsletter__input" required>
                             <button type="submit" class="newsletter__btn">
                                 <i class="fas fa-paper-plane"></i>
                                 Suscribirme
@@ -277,15 +279,18 @@
             });
         });
 
-        // Newsletter form
+        // Newsletter form - Solo validación, permitir envío real
         document.querySelector('.newsletter__form').addEventListener('submit', function(e) {
-            e.preventDefault();
             const email = this.querySelector('.newsletter__input').value;
             
-            if (email) {
-                alert('¡Gracias por suscribirte! Recibirás nuestras noticias en ' + email);
-                this.reset();
+            if (!email) {
+                e.preventDefault();
+                alert('Por favor, ingresa tu correo electrónico');
+                return false;
             }
+            
+            // Permitir que el formulario se envíe normalmente a FormSubmit
+            // No prevenir el envío por defecto para que funcione con FormSubmit
         });
     </script>
 
