@@ -36,7 +36,7 @@ El contenido de la noticia va aquí...
 
 **Texto en negrita** y *cursiva*
 
-Para más información, contacta con nosotros en info@colegionuevohorizonte.edu.py
+Para más información, contacta con nosotros en nuevohorizontecolegio87@gmail.com
 ```
 
 ### 3. Campos obligatorios del frontmatter

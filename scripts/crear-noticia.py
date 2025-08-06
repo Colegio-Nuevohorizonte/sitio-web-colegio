@@ -70,7 +70,7 @@ Contenido de la noticia...
 
 ---
 
-*Para más información, contacta con nosotros en info@colegionuevohorizonte.edu.py*
+*Para más información, contacta con nosotros en nuevohorizontecolegio87@gmail.com*
 '''
     
     # Crear directorio si no existe

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Noticia - Colegio Nuevo Horizonte</title>
+    <meta name="description" id="pageDescription" content="Noticia del Colegio Nuevo Horizonte">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/colores-vibrantes.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <img src="../assets/img/Lgo-Nuevo-Horizonte.webp" alt="Colegio Nuevo Horizonte" class="nav__logo-img" loading="lazy">
+                    <span class="nav__logo-text">Colegio Nuevo Horizonte</span>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="../index.html" class="nav__link">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="institucional.html" class="nav__link">Institucional</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="academico.html" class="nav__link">Académico</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="infraestructura.html" class="nav__link">Infraestructura</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="noticias.html" class="nav__link nav__link--active">Noticias</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contacto.html" class="nav__link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Botón de regreso -->
+        <section class="breadcrumb">
+            <div class="container">
+                <a href="noticias.html" class="btn btn--outline btn--small">
+                    <i class="fas fa-arrow-left"></i> Volver a Noticias
+                </a>
+            </div>
+        </section>
+
+        <!-- Loading mientras carga la noticia -->
+        <div id="loading" class="loading-container">
+            <div class="container">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Cargando noticia...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error si no se encuentra la noticia -->
+        <div id="error" class="error-container" style="display: none;">
+            <div class="container">
+                <div class="error">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h2>Noticia no encontrada</h2>
+                    <p>Lo sentimos, la noticia que buscas no existe o ha sido eliminada.</p>
+                    <a href="noticias.html" class="btn btn--primary">
+                        <i class="fas fa-arrow-left"></i> Volver a Noticias
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido de la noticia -->
+        <article id="noticiaContent" class="noticia-completa section" style="display: none;">
+            <div class="container">
+                <header class="noticia-header">
+                    <div class="noticia-meta">
+                        <span id="noticiaCategoria" class="noticia-categoria"></span>
+                        <span id="noticiaFecha" class="noticia-fecha">
+                            <i class="far fa-calendar-alt"></i> <span></span>
+                        </span>
+                        <span id="noticiaAutor" class="noticia-autor">
+                            <i class="far fa-user"></i> <span></span>
+                        </span>
+                    </div>
+                    <h1 id="noticiaTitulo" class="noticia-titulo"></h1>
+                    <p id="noticiaResumen" class="noticia-resumen"></p>
+                </header>
+
+                <div id="noticiaContenido" class="noticia-contenido">
+                    <!-- El contenido se cargará dinámicamente aquí -->
+                </div>
+
+                <!-- Botón de regreso al final -->
+                <div class="noticia-footer">
+                    <a href="noticias.html" class="btn btn--primary">
+                        <i class="fas fa-arrow-left"></i> Volver a Noticias
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <img src="../assets/img/Lgo-Nuevo-Horizonte.webp" alt="Colegio Nuevo Horizonte" class="footer__logo-img" loading="lazy">
+                        <span class="footer__logo-text">Colegio Nuevo Horizonte</span>
+                    </div>
+                    <p class="footer__description">
+                        Formando líderes del mañana con valores sólidos y educación de excelencia.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/share/1FEiourpsE/" target="_blank" class="footer__social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Enlaces Rápidos</h3>
+                    <ul class="footer__links">
+                        <li><a href="institucional.html" class="footer__link">Sobre Nosotros</a></li>
+                        <li><a href="academico.html" class="footer__link">Programas Académicos</a></li>
+                        <li><a href="infraestructura.html" class="footer__link">Instalaciones</a></li>
+                        <li><a href="noticias.html" class="footer__link">Noticias</a></li>
+                        <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Contacto</h3>
+                    <div class="footer__contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Km 10 Acaray, Ciudad del Este</p>
+                        <p><i class="fas fa-phone"></i> +595 983 660 286</p>
+                        <p><i class="fas fa-envelope"></i> nuevohorizontecolegio87@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 Colegio Nuevo Horizonte. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .breadcrumb {
+            padding: calc(70px + var(--espaciado-md)) 0 var(--espaciado-md);
+            background: var(--gris-claro);
+        }
+
+        .loading-container,
+        .error-container {
+            padding: var(--espaciado-xl) 0;
+            text-align: center;
+        }
+
+        .loading {
+            color: var(--gris-medio);
+        }
+
+        .loading i {
+            font-size: 2rem;
+            margin-bottom: var(--espaciado-md);
+            color: var(--azul-claro);
+        }
+
+        .error {
+            color: var(--gris-medio);
+        }
+
+        .error i {
+            font-size: 3rem;
+            margin-bottom: var(--espaciado-md);
+            color: var(--rojo);
+        }
+
+        .error h2 {
+            color: var(--azul-oscuro);
+            margin-bottom: var(--espaciado-md);
+        }
+
+        .noticia-completa {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .noticia-header {
+            text-align: center;
+            margin-bottom: var(--espaciado-xl);
+            padding-bottom: var(--espaciado-lg);
+            border-bottom: 2px solid var(--azul-claro);
+        }
+
+        .noticia-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--espaciado-lg);
+            margin-bottom: var(--espaciado-md);
+            flex-wrap: wrap;
+        }
+
+        .noticia-categoria {
+            background: var(--azul-claro);
+            color: var(--azul-oscuro);
+            padding: var(--espaciado-xs) var(--espaciado-sm);
+            border-radius: var(--radio-sm);
+            font-size: var(--texto-sm);
+            font-weight: var(--peso-medium);
+            text-transform: capitalize;
+        }
+
+        .noticia-fecha,
+        .noticia-autor {
+            color: var(--gris-medio);
+            font-size: var(--texto-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--espaciado-xs);
+        }
+
+        .noticia-titulo {
+            color: var(--azul-oscuro);
+            font-size: var(--h1-size);
+            font-weight: var(--peso-bold);
+            margin: var(--espaciado-md) 0;
+        }
+
+        .noticia-resumen {
+            font-size: var(--texto-lg);
+            color: var(--gris-medio);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .noticia-contenido {
+            color: var(--gris-oscuro);
+            line-height: 1.8;
+            font-size: var(--texto-base);
+        }
+
+        .noticia-contenido h2,
+        .noticia-contenido h3 {
+            color: var(--azul-oscuro);
+            margin-top: var(--espaciado-xl);
+            margin-bottom: var(--espaciado-md);
+        }
+
+        .noticia-contenido h2 {
+            font-size: var(--h2-size);
+        }
+
+        .noticia-contenido h3 {
+            font-size: var(--h3-size);
+        }
+
+        .noticia-contenido p {
+            margin-bottom: var(--espaciado-md);
+        }
+
+        .noticia-contenido ul {
+            margin: var(--espaciado-md) 0;
+            padding-left: var(--espaciado-lg);
+        }
+
+        .noticia-contenido li {
+            margin-bottom: var(--espaciado-xs);
+        }
+
+        .noticia-contenido strong {
+            color: var(--azul-oscuro);
+        }
+
+        .noticia-contenido hr {
+            border: none;
+            border-top: 1px solid var(--gris-claro);
+            margin: var(--espaciado-xl) 0;
+        }
+
+        .noticia-footer {
+            text-align: center;
+            margin-top: var(--espaciado-xl);
+            padding-top: var(--espaciado-lg);
+            border-top: 1px solid var(--gris-claro);
+        }
+
+        @media (max-width: 768px) {
+            .noticia-meta {
+                flex-direction: column;
+                gap: var(--espaciado-sm);
+            }
+
+            .noticia-titulo {
+                font-size: var(--h2-size);
+            }
+
+            .breadcrumb {
+                padding: calc(70px + var(--espaciado-sm)) 0 var(--espaciado-sm);
+            }
+        }
+    </style>
+
+    <script>
+        // Función para obtener parámetros de la URL
+        function getURLParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Función para formatear fecha
+        function formatearFecha(fechaISO) {
+            const fecha = new Date(fechaISO);
+            return fecha.toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        // Función para convertir markdown a HTML básico
+        function markdownToHTML(markdown) {
+            return markdown
+                .replace(/### (.*)/g, '<h3>$1</h3>')
+                .replace(/## (.*)/g, '<h2>$1</h2>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/^- (.*)$/gm, '<li>$1</li>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/^(?!<[h|l|p])/gm, '<p>')
+                .replace(/(?<!>)$/gm, '</p>')
+                .replace(/<p><li>/g, '<ul><li>')
+                .replace(/<\/li><\/p>/g, '</li></ul>')
+                .replace(/<p><h/g, '<h')
+                .replace(/<\/h([1-6])><\/p>/g, '</h$1>')
+                .replace(/<p><\/p>/g, '')
+                .replace(/---/g, '<hr>');
+        }
+
+        // Cargar noticia dinámicamente
+        async function cargarNoticia() {
+            const noticiaId = getURLParameter('id');
+            
+            if (!noticiaId) {
+                mostrarError();
+                return;
+            }
+
+            try {
+                const response = await fetch('../assets/js/noticias.json');
+                const noticias = await response.json();
+                const noticia = noticias.find(n => n.id === noticiaId);
+
+                if (!noticia) {
+                    mostrarError();
+                    return;
+                }
+
+                // Actualizar título de la página y meta description
+                document.getElementById('pageTitle').textContent = noticia.titulo + ' - Colegio Nuevo Horizonte';
+                document.getElementById('pageDescription').setAttribute('content', noticia.resumen);
+
+                // Llenar contenido
+                document.getElementById('noticiaCategoria').textContent = noticia.categoria;
+                document.getElementById('noticiaFecha').querySelector('span').textContent = formatearFecha(noticia.fecha);
+                document.getElementById('noticiaAutor').querySelector('span').textContent = noticia.autor;
+                document.getElementById('noticiaTitulo').textContent = noticia.titulo;
+                document.getElementById('noticiaResumen').textContent = noticia.resumen;
+                document.getElementById('noticiaContenido').innerHTML = markdownToHTML(noticia.contenido);
+
+                // Mostrar contenido y ocultar loading
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('noticiaContent').style.display = 'block';
+
+            } catch (error) {
+                console.error('Error al cargar la noticia:', error);
+                mostrarError();
+            }
+        }
+
+        function mostrarError() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').style.display = 'block';
+        }
+
+        // Cargar noticia cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', cargarNoticia);
+    </script>
+
+    <!-- JavaScript para el menú móvil -->
+    <script src="../assets/js/menu-mobile.js"></script>
+</body>
+</html>
