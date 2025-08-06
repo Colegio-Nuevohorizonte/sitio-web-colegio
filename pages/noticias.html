@@ -85,6 +85,22 @@
             </div>
         </section>
 
+        <!-- Filtros -->
+        <section class="filtros section">
+            <div class="container">
+                <div class="filtros__content">
+                    <h3 class="filtros__title">Filtrar por categoría:</h3>
+                    <div class="filtros__buttons">
+                        <button class="filtro-btn active" data-filter="all">Todas</button>
+                        <button class="filtro-btn" data-filter="academico">Académico</button>
+                        <button class="filtro-btn" data-filter="deportes">Deportes</button>
+                        <button class="filtro-btn" data-filter="eventos">Eventos</button>
+                        <button class="filtro-btn" data-filter="reconocimientos">Reconocimientos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Noticias Destacadas -->
         <section class="destacadas section">
             <!-- Se llenarán dinámicamente -->
@@ -96,64 +112,6 @@
                 <h2 class="section__title">Todas las Noticias</h2>
                 <div class="noticias__grid" id="noticias-grid">
                     <!-- Las noticias se cargarán aquí dinámicamente -->
-                        <div class="noticia__image">
-                            <img src="../assets/img/noticias/reconocimiento-docente.jpg" alt="Reconocimiento docente" loading="lazy">
-                            <div class="noticia__category noticia__category--reconocimientos">Reconocimientos</div>
-                        </div>
-                        <div class="noticia__content">
-                            <time class="noticia__date">5 de Julio, 2025</time>
-                            <h3 class="noticia__title">Profesora María González Recibe Premio Nacional de Excelencia Educativa</h3>
-                            <p class="noticia__excerpt">
-                                Reconocimiento a su dedicación y metodología innovadora en la enseñanza de matemáticas...
-                            </p>
-                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="noticia" data-category="eventos" data-aos="fade-up" data-aos-delay="100">
-                        <div class="noticia__image">
-                            <img src="../assets/img/noticias/dia-familia.jpg" alt="Día de la familia" loading="lazy">
-                            <div class="noticia__category noticia__category--eventos">Eventos</div>
-                        </div>
-                        <div class="noticia__content">
-                            <time class="noticia__date">3 de Julio, 2025</time>
-                            <h3 class="noticia__title">Día de la Familia: Fortaleciendo Lazos Educativos</h3>
-                            <p class="noticia__excerpt">
-                                Más de 500 familias participaron en actividades recreativas y educativas...
-                            </p>
-                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="noticia" data-category="academico" data-aos="fade-up" data-aos-delay="200">
-                        <div class="noticia__image">
-                            <img src="../assets/img/noticias/nuevo-laboratorio.jpg" alt="Nuevo laboratorio" loading="lazy">
-                            <div class="noticia__category noticia__category--academico">Académico</div>
-                        </div>
-                        <div class="noticia__content">
-                            <time class="noticia__date">1 de Julio, 2025</time>
-                            <h3 class="noticia__title">Inauguración del Nuevo Laboratorio de Ciencias</h3>
-                            <p class="noticia__excerpt">
-                                Equipamiento de última tecnología para potenciar la educación científica...
-                            </p>
-                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="noticia" data-category="deportes" data-aos="fade-up" data-aos-delay="300">
-                        <div class="noticia__image">
-                            <img src="../assets/img/noticias/natacion.jpg" alt="Competencia de natación" loading="lazy">
-                            <div class="noticia__category noticia__category--deportes">Deportes</div>
-                        </div>
-                        <div class="noticia__content">
-                            <time class="noticia__date">28 de Junio, 2025</time>
-                            <h3 class="noticia__title">Estudiantes Clasifican para Nacional de Natación</h3>
-                            <p class="noticia__excerpt">
-                                Tres estudiantes logran clasificar para el campeonato nacional tras destacar...
-                            </p>
-                            <a href="#" class="noticia__link">Leer más <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
                 </div>
 
                 <!-- Paginación -->
@@ -294,6 +252,33 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script>
+        // Filtros de noticias
+        document.addEventListener('DOMContentLoaded', function() {
+            const filtros = document.querySelectorAll('.filtro-btn');
+            const noticias = document.querySelectorAll('.noticia[data-category]');
+
+            filtros.forEach(filtro => {
+                filtro.addEventListener('click', function() {
+                    // Remover active de todos los filtros
+                    filtros.forEach(f => f.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const categoria = this.dataset.filter;
+
+                    // Filtrar noticias
+                    noticias.forEach(noticia => {
+                        if (categoria === 'all' || noticia.dataset.category === categoria) {
+                            noticia.style.display = 'block';
+                            noticia.classList.add('fade-in');
+                        } else {
+                            noticia.style.display = 'none';
+                            noticia.classList.remove('fade-in');
+                        }
+                    });
+                });
+            });
+        });
+
         // Newsletter form
         document.querySelector('.newsletter__form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -330,6 +315,48 @@
         
         .section {
             padding: var(--espaciado-2xl) 0;
+        }
+
+        /* Filtros */
+        .filtros {
+            background: var(--gris-claro);
+            padding: var(--espaciado-lg) 0;
+        }
+
+        .filtros__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--espaciado-md);
+        }
+
+        .filtros__title {
+            color: var(--azul);
+            margin: 0;
+        }
+
+        .filtros__buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--espaciado-sm);
+            justify-content: center;
+        }
+
+        .filtro-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--azul);
+            background: transparent;
+            color: var(--azul);
+            border-radius: var(--radio-md);
+            cursor: pointer;
+            transition: var(--transicion-normal);
+            font-weight: var(--peso-medio);
+        }
+
+        .filtro-btn:hover,
+        .filtro-btn.active {
+            background: var(--azul);
+            color: var(--blanco);
         }
 
         /* Noticias destacadas */
